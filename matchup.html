@@ -1,0 +1,34 @@
+<section id="matchup" class="view" hidden>
+  <div class="page-heading"><div><h1>Matchup</h1><p>查詢歷史三振紀錄，並比較Player Baseline與樣本不確定性。</p></div><div class="query-actions"><button id="share" class="button">複製查詢連結</button><button id="export" class="button">下載 Scouting Report</button></div></div>
+  <div id="query-status" class="query-status" role="status" hidden></div><input id="share-link" class="share-link" type="text" aria-label="查詢網址" readonly hidden><div class="data-notice"><strong>資料範圍</strong><span>2024 例行賽｜估計基準日：2025/01/01</span><span class="notice-end">歷史資料，非即時賽況</span></div>
+  <div class="query-form">
+    <div class="query-fields"><div class="field"><label for="pitcher">投手</label><select id="pitcher"></select></div><div class="field"><label for="batter">打者</label><select id="batter"></select></div></div>
+    <div class="examples-row"><span>查詢範例</span><div id="examples"></div></div>
+  </div>
+  <div class="result-heading"><h2><span id="pitcher-name"></span><span class="versus">對</span><span id="batter-name"></span></h2><span id="evidence-badge" class="sample-status"></span></div>
+  <div class="table-wrap result-table-wrap" aria-live="polite"><table class="result-table">
+    <caption class="sr-only">2024 投打對戰統計與模型估計</caption>
+    <thead><tr><th scope="col">有效打席</th><th scope="col">三振次數</th><th scope="col">歷史三振率</th><th scope="col">收縮估計</th><th scope="col">Matchup Weight</th></tr></thead>
+    <tbody><tr><td id="sample-pa"></td><td id="strikeouts"></td><td id="raw-rate"></td><td id="estimate" class="estimate-value"></td><td id="weight"></td></tr></tbody>
+  </table></div>
+  <div class="result-notes"><span id="estimate-detail"></span><span id="weight-detail"></span></div>
+  <div class="analysis-columns">
+    <article class="panel interval-panel">
+      <div class="section-heading"><h3>歷史比例與估計區間</h3><span>Wilson 90% 區間</span></div>
+      <p id="interval-description" class="interval-description"></p>
+      <div class="probability-chart" id="probability-chart" role="img" aria-label="歷史三振比例與收縮估計的比較圖">
+        <div class="chart-grid"><i></i><i></i><i></i><i></i><i></i></div><div class="axis-line"></div><div class="interval-segment" id="interval-segment"></div><div class="raw-dot" id="raw-dot"><span>歷史比例</span></div><div class="estimate-dot" id="estimate-dot"><span>收縮估計</span></div>
+        <div class="axis-labels"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+      </div>
+      <p class="fineprint">區間描述歷史對戰比例的抽樣不確定性，採獨立二項試驗近似；未包含跨季能力變化，亦非收縮估計的預測區間。</p>
+    </article>
+    <article class="panel reading-panel">
+      <div class="section-heading"><h3>判讀說明</h3></div><p id="scouting-note"></p>
+      <dl class="comparison-list"><div><dt>投手整體三振率</dt><dd id="pitcher-rate"></dd></div><div><dt>打者整體被三振率</dt><dd id="batter-rate"></dd></div><div><dt>投打者組合基準</dt><dd id="context-rate"></dd></div></dl>
+      <p class="fineprint">整體比例取自 2024。組合基準排除本組對戰，再合併投打者資訊。</p>
+    </article>
+  </div>
+  <article class="holdout-panel"><div class="holdout-copy"><h3>2025 年同組對戰結果</h3><p>另列下一季的實際紀錄。模型參數僅由 2024 資料決定。</p></div><div class="holdout-result" id="holdout-result" hidden></div><button class="button" id="reveal" aria-expanded="false">顯示 2025 對戰結果</button></article>
+  <div class="research-note"><p>全季測試中，<strong id="unseen-percent"></strong> 的打席在前一年沒有同組對戰紀錄。<a class="inline-link" href="/results/">查看完整回測結果</a></p></div>
+  <p class="fineprint example-note">範例依 2024 原始比例與收縮值的差距選取，並要求 2025 有對戰紀錄；未依 2025 三振結果挑選。案例僅供說明，模型效能以全季回測判定。</p>
+</section>

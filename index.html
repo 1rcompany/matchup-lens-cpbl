@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="查詢中華職棒歷史投打對戰、樣本數、三振比例與估計區間，並閱讀Out-of-Time Validation與資料方法。">
+<meta name="theme-color" content="#07151a">
+<meta property="og:type" content="website"><meta property="og:title" content="Matchup Lens｜CPBL Scouting"><meta property="og:description" content="查詢中華職棒歷史投打對戰、樣本數、三振比例與估計區間，並閱讀Out-of-Time Validation與資料方法。"><meta property="og:url" content="https://matchup-lens-cpbl-anson.rosycoin67.chatgpt.site/">
+<link rel="canonical" href="https://matchup-lens-cpbl-anson.rosycoin67.chatgpt.site/"><title>Matchup Lens｜CPBL Scouting</title>
+<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/scout.css"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head><body data-page="home">
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+<header class="site-header"><div class="header-inner">
+<a class="site-name" href="/" aria-label="Matchup Lens 首頁"><b class="brand-mark" aria-hidden="true">ML</b><span class="brand-name">Matchup<br>Lens<span>CPBL Scouting</span></span></a>
+<div class="site-context">CPBL Scouting Desk<span>2024 / 2025</span></div></div>
+<nav class="main-nav" aria-label="主選單"><div class="nav-inner"><a class="nav-item active" href="/" aria-current="page">首頁</a><a class="nav-item" href="/query/">Matchup</a><a class="nav-item" href="/pitch/">Pitch Scout</a><a class="nav-item" href="/compare/">Compare</a><a class="nav-item" href="/results/">Validation</a><a class="nav-item" href="/data/">資料與方法</a><a class="nav-item" href="/guide/">使用說明</a><span class="nav-note">資料年度 2024–2025</span></div></nav></header>
+<main id="main-content" class="container"><div id="loading" role="status">正在載入資料。</div><section id="home" class="home-page">
+<div class="scout-hero">
+ <p class="hero-eyebrow">CPBL / Pitch Scouting <span>2024 Data · 2025 Evaluation</span></p>
+ <div class="hero-main"><div><h1>投打對戰<br>逐球拆解<span class="cyan-dot">.</span></h1><div class="hero-subline"><span>Matchup Lens</span><i></i><span>CPBL Scouting</span></div><p class="hero-description">查配球、看揮空、對照落點。<br>選擇投手、打者與 Count，即可查詢。</p><div class="page-actions"><a class="button primary" href="/pitch/">開始分析 <span>↗</span></a><a class="hero-link" href="/pitch/#research">Models & Validation →</a></div></div>
+ <div class="hero-field" aria-hidden="true"><div class="field-caption"><span>Pitch Location</span><span>01 — 09</span></div><svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 286L210 94L402 286" stroke="#248195" stroke-width="1"/><path d="M86 286L210 162L334 286" stroke="#14505f"/><rect x="124" y="44" width="172" height="198" stroke="#d7f7fc" stroke-width="2"/><path d="M181 44V242M239 44V242M124 110H296M124 176H296" stroke="#236373"/><rect x="239" y="176" width="57" height="66" fill="#009ebc" fill-opacity=".35"/><circle cx="253" cy="197" r="8" fill="#00bedb"/><circle cx="273" cy="220" r="5" fill="#96eafa"/><circle cx="260" cy="185" r="4" fill="#5acde3"/><circle cx="214" cy="142" r="5" fill="#bcdae0"/><circle cx="169" cy="81" r="4" fill="#80aeb9"/><circle cx="324" cy="258" r="6" fill="#35b1c7"/><path d="M195 268H225V280L210 294L195 280Z" stroke="#d7f7fc" stroke-width="2"/><path d="M275 197H345V132" stroke="#70aebb" stroke-dasharray="3 4"/></svg><div class="field-caption"><span>球數 × 球種 × 位置</span><span>Scouting / Research</span></div></div></div>
+ <div class="hero-data"><div><span>2024 有效逐球紀錄</span><strong>101,123 <small>球</small></strong></div><div><span>2024 訓練揮棒</span><strong>47,061 <small>次</small></strong></div><div><span>2025 評估揮棒</span><strong>45,388 <small>次</small></strong></div><div class="hero-note">Rebas 開放資料<br>歷史情蒐，非即時賽況</div></div>
+</div>
+<section class="home-tool-section"><div class="editorial-heading"><h2>分析工具</h2><span>The Scouting Desk</span></div><div class="desk-grid"><a href="/pitch/" class="desk-item"><span class="desk-index">01 / Pitch</span><h3>Pitch Scout <span>↗</span></h3><p>比較不同 Count 下的 Pitch Mix 與 Whiff%。</p><span class="desk-tags">Pitch Mix / Whiff% / MLP</span></a><a href="/pitch/#heatmap" class="desk-item"><span class="desk-index">02 / Location</span><h3>Heatmap <span>↗</span></h3><p>投手常投哪裡？打者在哪裡較常揮空？</p><span class="desk-tags">Zone / Sample Size / vs. League</span></a><a href="/compare/" class="desk-item"><span class="desk-index">03 / Matchup</span><h3>Compare <span>↗</span></h3><p>固定投手，同時比較多名打者的對戰資料。</p><span class="desk-tags">歷史對戰 / 三振 / 樣本權重</span></a></div></section>
+<section class="home-query-row"><div><p class="page-kicker">Archive / 2024</p><h2>查一組歷史對戰</h2><p>查看打席、三振、原始比例與估計區間。</p><a class="inline-link" href="/guide/">操作說明 →</a></div><aside class="quick-query"><form action="/query/" method="get"><div class="field"><label for="pitcher">投手</label><select id="pitcher" name="pitcher" required><option value="">載入中</option></select></div><div class="field"><label for="batter">打者</label><select id="batter" name="batter" required><option value="">載入中</option></select></div><button class="button primary" id="quick-submit" type="submit" disabled>查詢對戰 ↗</button></form></aside></section>
+<div class="home-method-bar"><strong>數字怎麼來？</strong><p>Raw Data、Shrinkage Model 與 MLP 並列，附跨季誤差與資料排除口徑。</p><a href="/data/">資料與方法 →</a></div>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div><a class="footer-brand" href="/">Matchup Lens</a><span>中職投打對戰資料研究</span><div class="footer-links"><a href="/guide/">使用說明</a><a href="/data/">資料來源與授權</a><a href="/results/">Validation</a></div></div><p>資料來源：Rebas 野球革命 Open Data（ODC-By 1.0）<br>歷史資料研究工具・介面更新 2026/11/10；資料年度 2024–2025<br>獨立研究作品，非中華職棒或資料提供者的官方網站。</p></div></footer>
+<script type="module" src="/app.js"></script>
+</body></html>
